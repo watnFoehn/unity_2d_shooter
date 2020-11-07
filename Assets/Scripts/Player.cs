@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        transform.position = new Vector3(0, 0, 0);
+        transform.position = new Vector3(0, -3.5f, 0);
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
         if (_spawnManager == null)
         {
@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
     void ShootLaser()
     {
             _canFire = Time.time + _fireRate;
-            Instantiate(_laserPrefab, transform.position + new Vector3(0,0.5f,0), Quaternion.identity);
+            Instantiate(_laserPrefab, transform.position + new Vector3(0,1.05f,0), Quaternion.identity);
     }
 
     public void Damage()
